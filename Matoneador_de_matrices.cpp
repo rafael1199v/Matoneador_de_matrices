@@ -135,7 +135,6 @@ void suma(){
     cout << "Elementos de la primera matriz " << endl;
     for (int i = 0; i < filas; i++){
         for(int j = 0; j < columnas; j++){
-            //gotoxy(j*20, 23+i);
             cout << "Elemento " << "[" << i + 1 << "]" << "[" << j + 1 << "]:";
             cin >> matriz[i][j];
         }
@@ -147,7 +146,6 @@ void suma(){
     cout << "\nElementos de la segunda matriz " << endl;
     for (int i = 0; i < filas; i++){
         for(int j = 0; j < columnas; j++){
-            //gotoxy(j*20, 23+i);
             cout << "Elemento " << "[" << i + 1 << "]" << "[" << j + 1 << "]:";
             cin >> matriz2[i][j];
         }
@@ -182,7 +180,6 @@ void resta(){
     cout << "Elementos de la primera matriz " << endl;
     for (int i = 0; i < filas; i++){
         for(int j = 0; j < columnas; j++){
-            //gotoxy(j*20, 23+i);
             cout << "Elemento " << "[" << i + 1 << "]" << "[" << j + 1 << "]:";
             cin >> matriz[i][j];
         }
@@ -194,7 +191,6 @@ void resta(){
     cout << "\nElementos de la segunda matriz " << endl;
     for (int i = 0; i < filas; i++){
         for(int j = 0; j < columnas; j++){
-            //gotoxy(j*20, 23+i);
             cout << "Elemento " << "[" << i + 1 << "]" << "[" << j + 1 << "]:";
             cin >> matriz2[i][j];
         }
