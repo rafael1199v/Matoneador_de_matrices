@@ -8,4 +8,8 @@ Calculadora de matrices. Suma, Resta, Multiplicacion por escalar y cálculo de d
 
 # Ejemplo
 
-[![Matrices2.png](https://i.postimg.cc/MpDgnJCg/Matrices2.png)](https://postimg.cc/qNN1FSMG)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://chem.libretexts.org/@api/deki/files/282975/definition.jpg" alt="JuveYell" width="900px">
+</p>
+</div>
