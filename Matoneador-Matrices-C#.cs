@@ -10,10 +10,10 @@ namespace calculadora;
             do{
                 try
                 {
-                    title();
-                    int eleccion = menu();
-                    calculadoraMatricial(eleccion);
-                    Console.Write("Quieres volver a hacer un nuevo calculo?: (S/N) :");
+                    title(); //Llama a la funcion para mostrar el titulo
+                    int eleccion = menu(); // Obtiene la opcion elegida por el usuario
+                    calculadoraMatricial(eleccion); //Realiza la operacion elegida por el usuario
+                    Console.Write("Quieres volver a hacer un nuevo calculo?: (S/N) :"); //Lee la respuesta del usuario si quiere volver a hacer una operacion
                     reset = Console.ReadKey().KeyChar;
                     Console.WriteLine();
                 }
@@ -25,7 +25,7 @@ namespace calculadora;
                 
             }while(reset == 'S' || reset == 's');
         }
-
+        //Funcion para obtener una matriz del usuario
         public static int[,] conseguirMatriz(int filas, int columnas)
         {
             int[,] matriz = new int[filas, columnas];
@@ -42,11 +42,9 @@ namespace calculadora;
             }
             return matriz;
         }
-        public static string mostrarMatriz(int[,] a, int filas, int columnas)
+        //Muestra la matriz en la consola
+        public static void mostrarMatriz(int[,] a, int filas, int columnas)
         {
-            if(a == null){
-                return "Hubo un error";
-            }
             for (int i = 0; i < filas; i++)
             {
                 for (int j = 0; j < columnas; j++)
@@ -55,9 +53,8 @@ namespace calculadora;
                 }
                 Console.WriteLine();
             }
-            return "Matriz mostrada con exito";
         }
-
+        //Funcion para sumar dos matrices
         public static int[,] sumaDeMatrices(int[,] a, int[,] b, int filas,  int columnas)
         {
             for(int i = 0; i < filas; i++)
@@ -70,7 +67,7 @@ namespace calculadora;
 
             return a;
         }
-
+        //Funcion que resta 2 matrices
         public static int[,] restaDeMatrices(int[,] a, int[,]b, int filas, int columnas)
         {
             for (int i = 0; i < filas; i++)
@@ -83,7 +80,7 @@ namespace calculadora;
 
             return a;
         }
-
+        //Funcion para multiplicar una matriz por un escalar
         public static int[,] multiplicacionPorEscarlar(int[,] a, int escalar, int filas, int columnas)
         {
             for (int i = 0; i < filas; i++)
@@ -96,7 +93,7 @@ namespace calculadora;
 
             return a;
         }
-
+        //Esta funcion calcula el determinante de una matriz 2x2
         public static int determinate2x2(int[,] matriz)
         {
             int diagonal_principal = 1, diagonal_secundaria = 1, determinante;
@@ -120,7 +117,7 @@ namespace calculadora;
 
             return determinante;
         }
-
+        //Muestra el menu de opciones y retorna la opcion elegida
         public static int menu()
         {
             int eleccion;
@@ -142,7 +139,7 @@ namespace calculadora;
 
             return eleccion;
         }
-
+        //Depende de la eleccion del usuario ejecuta una operacion
         public static void calculadoraMatricial(int eleccion)
         {
             int filas, columnas;
@@ -151,7 +148,7 @@ namespace calculadora;
             switch (eleccion)
             {
                 case 1:
-
+                //Suma matricial
                     do
                     {
                         Console.WriteLine("Introduce el numero de filas y columnas");
@@ -174,7 +171,7 @@ namespace calculadora;
 
                     break;
                 case 2:
-
+                    //Resta Matricial
                     do
                     {
                         Console.WriteLine("Introduce el numero de filas y columnas");
@@ -197,6 +194,7 @@ namespace calculadora;
 
                     break;
                 case 3:
+                    //Multiplicacion por escalar
                     int escalar;
                     do
                     {
@@ -228,7 +226,7 @@ namespace calculadora;
             }
         }
         public static void title()
-        {
+        { //Muestra el titulo
             Console.WriteLine("\n");
             Console.WriteLine("'       e    e           e      ~~~888~~~   ,88~-_   888b    | 888~~       e      888~-_     ,88~-_   888--_");
             Console.WriteLine("'      d8b  d8b         d8b        888     d888   \\  |Y88b   | 888___     d8b     888   \\   d888   \\  888   \\");
